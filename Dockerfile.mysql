@@ -1,0 +1,6 @@
+FROM mysql:latest
+
+ENV MYSQL_DATABASE=techmart_db
+ENV MYSQL_ROOT_PASSWORD=root_password
+
+COPY ./sql-scripts/ /docker-entrypoint-initdb.d/
